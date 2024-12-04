@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>ITEC 4020 A Fall 2024 - Assignment by Dalena Dang</title>
+
+    <meta name="author" content="Dalena Dang">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/669_yorku-logo-small.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/app.js"></script>
+  </head>
+
+  <body>
+    <main>
+      <section id="profile">
+          <div id="bio">
+            <h1 class="name">Dalena Dang</h1>
+            <p>
+              I am a full-time junior data analyst with 
+              <a href="https://www.cibc.com/en/personal-banking.html">Canadian Imperial Bank of Commerce (CIBC)</a> in Toronto by day, 
+              and an ITEC Bachelor of Commerce student at 
+              <a href="https://www.yorku.ca/laps/itec/information-technology/bcom-option/">York University</a> by night.
+            </p>
+            <p> 
+              In the ITEC Bachelor of Commerce program at York University, I have worked on many projects which introduced many 
+              new methodologies and programming languages, allowing me to refine my technical skillset and equip me with 
+              techniques relevant to today's technology.
+            </p>
+            <nav>
+              <a href="mailto:itsddang@my.yorku.ca">Email</a> &nbsp;/&nbsp;
+              <a href="data/Dalena-Dang_DS2024R.pdf">CV</a> &nbsp;/&nbsp;
+              <a href="data/DalenaDang-bio.txt">Bio</a> &nbsp;/&nbsp;
+              <a href="https://www.linkedin.com/in/dalena-dang/">LinkedIn</a> &nbsp;/&nbsp;
+              <a href="https://github.com/dalenadang">Github</a>
+            </nav>
+          </div>
+          <div style="padding:2.5%;width:40%;max-width:40%">
+            <a href="images/dang-dalena-formal.png"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/dang-dalena-formal.png" class="hoverZoomLink"></a>
+          </div>  
+      </section>
+      
+      <table><tbody>
+        <tr>
+          <td style="padding:20px;width:100%;vertical-align:middle" colspan="2">
+            <h2>Projects</h2>
+            <p id="introductory">
+              There were many mandatory projects assigned in the ITEC Bachelor of Commerce courses.  
+              Below are a list of completed projects.  Key projects are <span class="highlight">highlighted</span>.
+            </p>
+          </td>
+        </tr>
+
+        <!-- ITEC 4020 A Project Section -->
+        <tr onmouseout="hover_stop('hover_img')" onmouseover="hover_start('hover_img')" class="highlight">
+          <td style="padding:20px;width:25%;vertical-align:middle">
+            <div class="one">
+              <div class="two" id='hover_img'>
+                <img src='images/ChatGPT-Logo-2.jpg' width="160">
+              </div>
+              <img src='images/ChatGPT-Logo.jpg' width="160">
+            </div>
+            <script type="text/javascript">
+              hover_stop('hover_img')
+            </script>
+          </td>
+          <td style="padding:20px;width:75%;vertical-align:middle">
+            <a href="chatgptefficiency/index.html">
+          <span class="papertitle">ChatGPT Efficiency Evaluation Project</span>
+            </a>
+            <br/>
+            <strong>Dalena Dang</strong>
+            <br/>
+            <em>ITEC 4020 Internet Client-Server Systems</em>, 2024
+            <br>
+            <a href="data/Assignment_ Building an Interactive Website to Validate ChatGPT Efficiency.pdf">assignment outline</a> / 
+            <a href="https://dalenadangyu.github.io/ITEC4020A-Fall2024-Assignment/">project source code</a> / 
+            <a href="" onclick="messageNA()">presentation video</a>
+            <p>
+              A ChatGPT efficiency evaluation conducted by using a server that was implemented to request documents from three different 
+              collections stored in an unstructured NoSQL database and receive the responses from ChatGPT AI through API integration.
+            </p>
+          </td>
+        </tr>
+
+        <!-- Placebo Other Project Section as placeholder -->
+        <tr>
+        <tr onmouseout="hover_stop('hover_img2')" onmouseover="hover_start('hover_img2')">
+          <td style="padding:20px;width:25%;vertical-align:middle">
+            <div class="one" style="width:100%;height:100%">
+              <div class="two" id='hover_img2' style="width:100%;height:100%">
+                <img src='images/669_yorku-logo-small-2.png' width="160" style="border-style: none">
+              </div>
+              <img src='images/669_yorku-logo-small.png' width="160" style="border-style: none">
+            </div>
+            <script type="text/javascript">
+              hover_stop('hover_img2')
+            </script>
+          </td>
+          <td width="75%" valign="middle">
+            <a href="" onclick="messageNA()">
+              <span class="papertitle">Diet Nutrition Tracker Project</span>
+            </a>
+            <br>
+            <strong>Dalena Dang</strong>
+            <br>
+            <em>ITEC 3020 Web Technologies</em>, 2023
+            <br />
+            <a href="" onclick="messageNA()">assignment outline</a> /
+            <a href="" onclick="messageNA()">project source code</a> /
+            <a href="" onclick="messageNA()">presentation video</a>
+            <p>The diet nutrition tracker web application allowed users to add, modify, update, and delete food items.</p>
+            <p>The submitted project received a grade of A+.</p>
+          </td>
+        </tr>
+
+      </tbody></table>
+    </main>
+    <div id="footer">
+      <footer>
+        <hr />
+        <p style="text-align:right;font-size:small;">
+          Website template source code retrieved from <a href="https://github.com/jonbarron/jonbarron_website">here</a>. 
+          <strong>Do not</strong> scrape the HTML from this page itself, as it includes analytics tags that you do not want on your own 
+          website &mdash; use the github code instead. Also, consider using <a href="https://leonidk.com/">Leonid Keselman</a>'s 
+          <a href="https://github.com/leonidk/new_website">Jekyll fork</a> of this page.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

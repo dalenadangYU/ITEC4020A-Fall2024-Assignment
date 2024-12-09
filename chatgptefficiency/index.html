@@ -1,1 +1,292 @@
+<html lang="en">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="author" content="Dalena Dang">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/mcqgenerator.js"></script>
+  <link rel="shortcut icon" href="/public/669_yorku-logo-small.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="/app.css">
+  <link rel="stylesheet" href="/bootstrap.min.css">
+  <title>ITEC4020AF24 - Group Assignment | ChatGPT: Efficiency Evaluation Research</title>
+</head>
+  <body>
+    <div class="container" id="main">
+      <div class="container" id="main">
+        <div class="row">
+          <h2 class="col-md-12 text-center"><b>ChatGPT</b>: An Efficiency Evaluation Research</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+          <ul class="list-inline">
+              <li>
+                <a href="https://dalenadangyu.github.io/ITEC4020A-Fall2024-Assignment/" target="_blank">Dalena Dang</a><br/>
+                  York University 2024
+              </li>
+          </ul>
+      </div>
+    </div>
 
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4 text-center">
+          <ul class="nav nav-pills nav-justified">
+              <li>
+                  <a href="https://drive.google.com/drive/folders/165Os_GXfkMv7N1pGzxDcrPh9TQo2sGh9" target="_blank">
+                      <image src="/mip_paper_image.jpg" height="60px" />
+                      <h4><strong>Data Files</strong></h4>
+                  </a>
+              </li>
+              <li>
+                  <a href="https://youtube.com/" target="_blank">
+                  <image src="/youtube_icon.png" height="60px">
+                      <h4><strong>Video</strong></h4>
+                  </a>
+              </li>
+              <li>
+                  <a href="https://github.com/dalenadangYU/ITEC4020A-Fall2024-Assignment/tree/f64786111ac78a5af51e8280cbe5c996c6423f49" target="_blank">
+                      <image src="/github.png" height="60px" />
+                      <h4><strong>Code</strong></h4>
+                  </a>
+              </li>
+          </ul>
+      </div>
+    </div>
+</div>
+
+      <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <h3>Abstract</h3>
+        <!-- <image src="img/rays.png" class="img-responsive" alt="overview"><br> -->
+        <p class="text-justify" id="abstract" onload="abstract()">
+          ChatGPT's responses to users' inquiries inputted demonstrates a high level of sophistication in the 
+          machine learning's capacity to comprehend and exchange communication fluidly.  However, the responses 
+          (or answers) provided from ChatGPT and other machine learning language engines have been observed to be 
+          sometimes inaccurate.  The ChatGPT Efficiency Evaluation Research conducted evaluates the accuracy of 
+          ChatGPT's responses to questions across the following topic domains: Computer Security, History, and 
+          Social Science.
+        </p>
+    </div>
+</div>
+
+<!-- <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <h3>
+            Video
+        </h3>
+        <div class="text-center">
+            <div style="position:relative;padding-top:56.25%;">
+                <iframe src="https://www.youtube.com/embed/EpH175PY1A0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <h3>Research Approach</h3>
+    <p class="text-justify">
+      Provided a website-master template package, a 
+      <a href="https://dalenadangyu.github.io/ITEC4020A-Fall2024-Assignment/" target="_blank">portfolio 
+        landing page</a> was quickly put together as an introduction to the student collaborators that 
+        worked on the assignment.  I, Dalena Dang, worked on the assignment alone, thus only one student 
+        name has been provided in the portfolio landing page and on this evaluation research page.
+        <br />
+        <br />
+        <h4>The Setup: MongoDB & Mongoose</h4>
+        Provided <a href="https://drive.google.com/drive/folders/165Os_GXfkMv7N1pGzxDcrPh9TQo2sGh9">(3) three .csv files</a>, 
+        each preloaded with rows of multiple-choice questions with (4) four potential answer options, and the correct answer; 
+        a non-relational database was created using 
+        <a href="https://cloud.mongodb.com/v2/652f113698706805148ab022#/clusters/detail/itec4020a">MongoDB Atlas</a> 
+        with the name 'ChatGPT_Evaluation'.  The (3) three .csv files were uploaded into separate collections: 
+        'Computer_Security', 'History', and 'Social_Science'.
+        <br />
+        <br />
+        We adopted MongoDB's ODM (Object Data Modelling) library to build a schema for the ChatGPT_Evaluation 
+        database which will be routed to via Node.js.
+        <br />
+        <br />
+        <h4>The Tools: Node.js, Express.js & EJS</h4>
+        Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable 
+        network applications.  Node.js has a built-in package manager, Node Package Manager (NPM) which 
+        was used to allow server-side scripting to perform on a local server.  We created a local server 
+        using Express.js.
+        <br />
+        <br />
+        Express.js is a Web Application Framework for Node.js that simplifies server creation, routing, 
+        middleware, and more.  We use Express.js in this assignment as the backbone for our web research 
+        page and communication routing with the MongoDB database and ChatGPT's AI via RESTful APIs.
+        <br />
+        <br />
+        <h4>The Technologies - ChatGPT API</h4>
+        Provided a ChatGPT API key, we integrated ChatGPT's 
+    </p>
+    <!-- <p style="text-align:center;">
+        <image src="img/pe_seq_eqn_pad.png" height="50px" class="img-responsive">
+    </p>
+    <video id="v0" width="100%" autoplay loop muted>
+      <source src="img/pe_anim_horiz.mp4" type="video/mp4" />
+    </video>
+    <p class="text-justify"></p>
+    <p style="text-align:center;">
+        <image src="img/ipe_eqn_under_pad.png" height="30px" class="img-responsive">
+    </p>
+    <video id="v0" width="100%" autoplay loop muted>
+      <source src="img/ipe_anim_horiz.mp4" type="video/mp4" />
+    </video>
+    <p class="text-justify"></p> -->
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <h3>Data Overview</h3>
+    <p class="text-justify">
+      Provided (3) three .csv file types holding numerous questions, answer options, and the correct answer per tuple, the data was uploaded into (3) collections.  
+      Click on a collection to request a question.<br />
+    </p>
+      <table id="mcq-buttons">
+        <tr>
+          <td><button class="mcq-buttons" onclick="mcqGenerate('/computer-security-mcq')">Request Computer Security MCQ</button></td>
+          <td><button class="mcq-buttons" onclick="mcqGenerate('/prehistory-mcq')">Request History MCQ</button></td>
+          <td><button class="mcq-buttons" onclick="mcqGenerate('/sociology-mcq')">Request Social Science MCQ</button></td>
+        </tr>
+      </table>
+      <p><b>Question: </b><span id="mcq-info"></span></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+      <h3>Graph</h3>
+      <p class="text-justify">ChatGPT's efficiency based on the results are as follows:</p>
+      <canvas id="myCanvas" width="600" height="600" style="border:1px solid black;" ></canvas>
+      <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+        const ctx2 = canvas.getContext("2d");
+          
+        ctx.beginPath(); // Define a new path
+        ctx.moveTo(550, 550); // Set a start-point
+        ctx.lineTo(50, 550); // Set an end-point
+        ctx.moveTo(50, 50); // Set a start-point
+        ctx.lineTo(50, 550); // Set an end-point
+        ctx.font = "14px Arial";
+        ctx.fillText("Computer Security Test",75,575);
+        ctx.fillText("Prehistory Test",275,575);
+        ctx.fillText("Sociology Test",425,575);
+        ctx.fillText("0 -",30,550);
+        ctx.fillText("5 -",30,500);
+        ctx.fillText("10 -",23,450);
+        ctx.fillText("15 -",23,400);
+        ctx.fillText("20 -",23,350);
+        ctx.fillText("25 -",23,300);
+        ctx.fillText("30 -",23,250);
+        ctx.fillText("35 -",23,200);
+        ctx.fillText("40 -",23,150);
+        ctx.fillText("45 -",23,100);
+        ctx.fillText("50 -",23,54);
+        ctx.fillText("# Questions Asked",100,25);
+        ctx.fillText("# Correct Answers by ChatGPT",350,25);
+        ctx.fillStyle = "purple";
+        ctx.fillRect(75,12,15,15);
+        ctx.fillStyle = "green";
+        ctx.fillRect(325,12,15,15);
+        ctx.stroke(); // Stroke it (Do the Drawing)
+      </script>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+      <h3>Results</h3>
+      <table class="table table-striped" id="mcq-table">
+        <thead>
+          <th>Question</th>
+          <th>Option A</th>
+          <th>Option B</th>
+          <th>Option C</th>
+          <th>Option D</th>
+          <th>Anticipated Answer</th>
+          <th>ChatGPT's Answer</th>
+        </thead>
+        <tbody id="result">
+          <% if (documents > 0) { %>
+            <% documents.forEach(docu => { %>
+              <tr>
+                <td><%= docu.question %></td>
+                <td><%= docu.optionA %></td>
+                <td><%= docu.optionB %></td>
+                <td><%= docu.optionC %></td>
+                <td><%= docu.optionD %></td>
+                <td><%= docu.anticipatedAnswer %></td>
+                <td><%= docu.responseGPT %></td>
+              </tr>
+            <% }) %>
+          <% } else { %>
+            <tr style="text-align:center;"><td colspan="7" style="padding:2rem;">There are no questions to display...</td></tr>
+          <% } %>
+        </tbody>
+      </table>
+  </div>
+</div>
+      
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+      <h3>
+          Related links
+      </h3>
+      <!-- <p class="text-justify">
+          <a href="https://en.wikipedia.org/wiki/Spatial_anti-aliasing">Wikipedia</a> provides an excellent introduction to spatial anti-aliasing techniques.
+      </p>
+      <p class="text-justify">
+          Mipmaps were introduced by Lance Williams in his paper "Pyramidal Parametrics" (<a href="https://software.intel.com/sites/default/files/m/7/2/c/p1-williams.pdf">Williams (1983)</a>).
+      </p>
+      <p class="text-justify">
+          <a href="https://dl.acm.org/doi/abs/10.1145/964965.808589">Amanatides (1984)</a> first proposed the idea of replacing rays with cones in computer graphics rendering. 
+      </p>
+      <p class="text-justify">
+          The closely related concept of <em>ray differentials</em> (<a href="https://graphics.stanford.edu/papers/trd/">Igehy (1999)</a>) is used in most modern renderers to antialias textures and other material buffers during ray tracing.
+      </p>
+      <p class="text-justify">
+          Cone tracing has been used along with prefiltered voxel-based representations of scene geometry for speeding up indirect illumination calculations in <a href="https://research.nvidia.com/sites/default/files/publications/GIVoxels-pg2011-authors.pdf">Crassin et al. (2011)</a>.
+      </p>
+      <p class="text-justify">
+          Mip-NeRF was implemented on top of the <a href="https://github.com/google-research/google-research/tree/master/jaxnerf">JAXNeRF</a> codebase.
+      </p> -->
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <h3>Citation</h3>
+    <div class="form-group col-md-10 col-md-offset-1">
+      <textarea id="bibtex" class="form-control" readonly>
+        @article{dang2024chatgptefficiencyevaluationresearch,
+            title={ChatGPT:
+              An Efficiency Evaluation Research},
+            author={Dalena Dang 
+              217525064},
+            course={ITEC4020A},
+            year={2024}
+        }
+      </textarea>
+    </div>
+  </div>
+</div>
+
+<footer class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <hr />
+    <h3>Acknowledgements</h3>
+    <p class="text-justify">
+    <!-- We thank Janne Kontkanen and David Salesin for their comments on the text, Paul Debevec for constructive discussions, and Boyang Deng for JaxNeRF.  -->
+        <br />
+    <!-- MT is funded by an NSF Graduate Fellowship. -->
+        <br />
+    The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.
+    </p>
+  </div>
+</footer>
+    </div>
+  </body>
+</html>

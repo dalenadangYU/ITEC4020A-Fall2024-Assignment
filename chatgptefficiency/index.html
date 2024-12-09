@@ -32,19 +32,19 @@
           <ul class="nav nav-pills nav-justified">
               <li>
                   <a href="https://drive.google.com/drive/folders/165Os_GXfkMv7N1pGzxDcrPh9TQo2sGh9" target="_blank">
-                      <image src="/mip_paper_image.jpg" height="60px" />
+                      <image src="public/mip_paper_image.jpg" height="60px" />
                       <h4><strong>Data Files</strong></h4>
                   </a>
               </li>
               <li>
                   <a href="https://youtube.com/" target="_blank">
-                  <image src="/youtube_icon.png" height="60px">
+                  <image src="public/youtube_icon.png" height="60px">
                       <h4><strong>Video</strong></h4>
                   </a>
               </li>
               <li>
                   <a href="https://github.com/dalenadangYU/ITEC4020A-Fall2024-Assignment/tree/f64786111ac78a5af51e8280cbe5c996c6423f49" target="_blank">
-                      <image src="/github.png" height="60px" />
+                      <image src="public/github.png" height="60px" />
                       <h4><strong>Code</strong></h4>
                   </a>
               </li>
@@ -209,23 +209,7 @@
           <th>Anticipated Answer</th>
           <th>ChatGPT's Answer</th>
         </thead>
-        <tbody id="result">
-          <% if (documents > 0) { %>
-            <% documents.forEach(docu => { %>
-              <tr>
-                <td><%= docu.question %></td>
-                <td><%= docu.optionA %></td>
-                <td><%= docu.optionB %></td>
-                <td><%= docu.optionC %></td>
-                <td><%= docu.optionD %></td>
-                <td><%= docu.anticipatedAnswer %></td>
-                <td><%= docu.responseGPT %></td>
-              </tr>
-            <% }) %>
-          <% } else { %>
-            <tr style="text-align:center;"><td colspan="7" style="padding:2rem;">There are no questions to display...</td></tr>
-          <% } %>
-        </tbody>
+        <tbody id="result"></tbody>
       </table>
   </div>
 </div>

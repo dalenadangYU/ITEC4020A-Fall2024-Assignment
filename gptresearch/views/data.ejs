@@ -1,0 +1,92 @@
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <h3>Data Overview</h3>
+    <p class="text-justify">
+      Provided (3) three .csv file types holding numerous questions, answer options, and the correct answer per tuple, the data was uploaded into (3) collections.  
+      Click on a collection to request a question.<br />
+    </p>
+      <table id="mcq-buttons">
+        <tr>
+          <td><button class="mcq-buttons" onclick="mcqGenerate('/computer-security-mcq')">Request Computer Security MCQ</button></td>
+          <td><button class="mcq-buttons" onclick="mcqGenerate('/prehistory-mcq')">Request History MCQ</button></td>
+          <td><button class="mcq-buttons" onclick="mcqGenerate('/sociology-mcq')">Request Social Science MCQ</button></td>
+        </tr>
+      </table>
+      <p><b>Question: </b><span id="mcq-info"></span></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+      <h3>Graph</h3>
+      <p class="text-justify">ChatGPT's efficiency based on the results are as follows:</p>
+      <canvas id="myCanvas" width="600" height="600" style="border:1px solid black;" ></canvas>
+      <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+        const ctx2 = canvas.getContext("2d");
+          
+        ctx.beginPath(); // Define a new path
+        ctx.moveTo(550, 550); // Set a start-point
+        ctx.lineTo(50, 550); // Set an end-point
+        ctx.moveTo(50, 50); // Set a start-point
+        ctx.lineTo(50, 550); // Set an end-point
+        ctx.font = "14px Arial";
+        ctx.fillText("Computer Security Test",75,575);
+        ctx.fillText("Prehistory Test",275,575);
+        ctx.fillText("Sociology Test",425,575);
+        ctx.fillText("0 -",30,550);
+        ctx.fillText("5 -",30,500);
+        ctx.fillText("10 -",23,450);
+        ctx.fillText("15 -",23,400);
+        ctx.fillText("20 -",23,350);
+        ctx.fillText("25 -",23,300);
+        ctx.fillText("30 -",23,250);
+        ctx.fillText("35 -",23,200);
+        ctx.fillText("40 -",23,150);
+        ctx.fillText("45 -",23,100);
+        ctx.fillText("50 -",23,54);
+        ctx.fillText("# Questions Asked",100,25);
+        ctx.fillText("# Correct Answers by ChatGPT",350,25);
+        ctx.fillStyle = "purple";
+        ctx.fillRect(75,12,15,15);
+        ctx.fillStyle = "green";
+        ctx.fillRect(325,12,15,15);
+        ctx.stroke(); // Stroke it (Do the Drawing)
+      </script>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+      <h3>Results</h3>
+      <table class="table table-striped" id="mcq-table">
+        <thead>
+          <th>Question</th>
+          <th>Option A</th>
+          <th>Option B</th>
+          <th>Option C</th>
+          <th>Option D</th>
+          <th>Anticipated Answer</th>
+          <th>ChatGPT's Answer</th>
+        </thead>
+        <tbody id="result">
+          <% if (documents > 0) { %>
+            <% documents.forEach(docu => { %>
+              <tr>
+                <td><%= docu.question %></td>
+                <td><%= docu.optionA %></td>
+                <td><%= docu.optionB %></td>
+                <td><%= docu.optionC %></td>
+                <td><%= docu.optionD %></td>
+                <td><%= docu.anticipatedAnswer %></td>
+                <td><%= docu.responseGPT %></td>
+              </tr>
+            <% }) %>
+          <% } else { %>
+            <tr style="text-align:center;"><td colspan="7" style="padding:2rem;">There are no questions to display...</td></tr>
+          <% } %>
+        </tbody>
+      </table>
+  </div>
+</div>

@@ -1,0 +1,4 @@
+In the ITEC 4020 Internet Client-Server Systems course offered at York University, we learned how to create a server in Node.js with Express.js with API integration to ChatGPT AI. to a unstructured NoSQL Database via MongoDB.  combine our skills in web development with an evaluation of ChatGPT's efficiency.  Using our knowledge in web development, we produced an in-depth evaluation of ChatGPT's efficiency across various domains.
+
+
+A ChatGPT efficiency evaluation conducted by using a server implemented for requesting documents from three different collections stored in an unstructured NoSQL database and receiving responses from ChatGPT AI through API integration.

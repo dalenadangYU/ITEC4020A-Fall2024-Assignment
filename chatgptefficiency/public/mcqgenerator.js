@@ -9,6 +9,10 @@ var histGPT = 0;
 var socsciGPT = 0;
 var correctCounter = 0;
 
+function messageNA() {
+    alert("Sorry, this source is not available yet.  To be uploaded soon.");
+}
+
 function mcqGenerate(route) {
     fetch(route)
     .then(response => response.json())

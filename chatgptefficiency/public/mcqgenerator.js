@@ -14,25 +14,25 @@ function messageNA() {
 }
 
 function mcqGenerate(route) {
-    fetch(route)
-    .then(response => response.json())
-    .then(data => {
-        mcqresults = data.documents;
+    // fetch(route)
+    // .then(response => response.json())
+    // .then(data => {
+    //     mcqresults = data.documents;
       
-        mcqresults.forEach(docu => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${docu.question}</td>
-                <td>${docu.optionA}</td>
-                <td>${docu.optionB}</td>
-                <td>${docu.optionC}</td>
-                <td>${docu.optionD}</td>
-                <td>${docu.anticipatedAnswer}</td>
-                <td>${docu.responseGPT}</td>
-            `;
-            result.appendChild(row);
-            document.getElementById('mcq-info').innerHTML = `${mcqresults[0].question}`;
-        });
+    //     mcqresults.forEach(docu => {
+    //         const row = document.createElement('tr');
+    //         row.innerHTML = `
+    //             <td>${docu.question}</td>
+    //             <td>${docu.optionA}</td>
+    //             <td>${docu.optionB}</td>
+    //             <td>${docu.optionC}</td>
+    //             <td>${docu.optionD}</td>
+    //             <td>${docu.anticipatedAnswer}</td>
+    //             <td>${docu.responseGPT}</td>
+    //         `;
+    //         result.appendChild(row);
+    //         document.getElementById('mcq-info').innerHTML = `${mcqresults[0].question}`;
+    //     });
         
         switch (route) {
             case '/computer-security-mcq':
